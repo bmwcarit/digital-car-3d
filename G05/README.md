@@ -4,35 +4,56 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 --->
 
-# G05 Open Source
-
-_Created with Ramses Composer Version 0.13.1_
 
 #
-## Overview
+# BMW X5 2018 (G05)
 
-This project contains a visualisation of the BMW G05 as an interactive 3D car model. It is intended as a showcase to demonstrate the capabilities of the [Ramses Toolchain](http://www.ramses3d.org) with a fairly complex and realistic example.
-
-To view it, start [Ramses Composer](https://github.com/bmwcarit/ramses-composer/blob/main/README.md) and load *G05_main.rca*
+_Created with [Ramses Composer Version 0.13.1](https://github.com/bmwcarit/ramses-composer)_
 
 #
-## Features
+# How to open the project?
 
-Here is a short overview over the currently implemented functions.
+## Download the Ramses Composer
 
-For an extended documentation on how to control the scene and the detailed meaning of its parameters, see the documentation in the _interface()_ function of the [SceneControls script](./scripts/SceneControls.lua).
+Direct links:
 
-_(All functions are currently implemented without animations.)_
+* [Windows](https://github.com/COVESA/ramses-composer/releases/download/v0.13.1/RamsesComposerWindows_v0.13.1.zip)
+* [Linux](https://github.com/COVESA/ramses-composer/releases/download/v0.13.1/RamsesComposerLinux_v0.13.1.zip)
+
+## Start the Ramses Composer
+
+Go to bin/RelWithDebInfo, start RamsesComposer.exe on Windows, RamsesComposer.sh on Linux.
+
+## Open the car project
+
+Open [the G05 project file](./G05_main.rca) via File->Open.
+
+#
+# Change settings and experiment
+
+#
+## Open the control script
+
+Uncollapse the `root` node in the `Scene Graph` tab and select the `SceneControls` script:
+
+![Interface](./docs/interface.png)]
+
+In the `Property Browser` tab you will see a list of inputs you can set/modify:
+
+![Interface](./docs/properties.png)]
+
+#
+## Modify some of the car features
 
 ### Changing Car Paint
 
-* There are 7 different paints with different surface attributes and colors which can be applied to the model
 * To change the car paint, use the numeric _CarPaint_ID_ property
+* There are 7 different paints with different surface attributes and colors which can be applied to the model
 
 ### Changing Camera Perspective
 
-* There are 6 different, pre-defined camera perspectives for viewing the car
 * To change the camera perspective, use the numeric _CameraPerspective_ID_ property
+* There are 6 different, pre-defined camera perspectives for viewing the car
 
 ### Opening / Closing the Doors
 
@@ -42,15 +63,30 @@ _(All functions are currently implemented without animations.)_
   * *Door_F_R_OpeningValue* (front right)
   * *Door_B_L_OpeningValue* (rear left)
   * *Door_B_R_OpeningValue* (rear right)
-* The door, for values of its respective property, is closed at 0.0 and fully open at 1.0.  
+* The door, for values of its respective property, is closed at 0.0 and fully open at 1.0.
 For values in between 0 and 1, the door angle is interpolated proportionally to the value (e.g. 0.5 is half-open)
 
 ### Opening / Closing the Tailgate
 
-* Analogous to the doors, the tailgate can also be opened or closed
 * To set the tailgate opening angle, use the _Tailgate_OpeningValue_ property
-* The tailgate is closed at 0.0 and fully open at 1.0.  
+* Analogous to the doors, the tailgate can also be opened or closed
+* The tailgate is closed at 0.0 and fully open at 1.0.
 For values in between 0 and 1, the tailgate angle is interpolated proportionally to the value (e.g. 0.5 is half-open) 
+
+You can find more detailed documentation of the input values by looking into [the control script](./scripts/SceneControls.lua)
+which you can open from the pencil button right next to the `URI` field in the Property Browser.
+
+#
+## What next
+
+To learn how to modify the scene in more complex ways, or simply understand how it works,
+please refer to the [Ramses Composer tutorials](https://github.com/bmwcarit/ramses-composer-docs) which explain the various features of the
+Composer with interactive examples.
+
+#
+## Rendering Tip
+
+By default, the _Ramses Preview_ window in Ramses Composer shows you the unvarnished truth about every pixel. In order to get an impression of what the car would look like in a target environment with antialiasing enabled, switch the drop down box above the render view from _Nearest filtering_ to _Linear filtering_
 
 #
 ## Dependencies
@@ -60,11 +96,6 @@ It contains external references to the following reusable projects (make sure th
 * [CameraCrane](_shared/CameraCrane)
 * [Environment](_shared/Environment)
 * [MatLib](_shared/MatLib)
-
-#
-## Rendering Tip
-
-By default, the _Ramses Preview_ window in Ramses Composer shows you the unvarnished truth about every pixel. In order to get an impression of what the car would look like in a target environment with antialiasing enabled, switch the drop down box above the render view from _Nearest filtering_ to _Linear filtering_
 
 #
 ## Disclaimer
