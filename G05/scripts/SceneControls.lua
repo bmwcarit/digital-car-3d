@@ -5,6 +5,53 @@ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 ]]--
 
 
+-- Define Input and Output parameters
+function interface()
+    -- Input Parameters
+    IN.CarPaint_ID = INT -- ID of exterior paint (DEFAULT: 1) - all options listed below
+    --[[
+        1: Pyhtonic Blue
+        2: Transanit Blue
+        3: Black
+        4: Black Metallic
+        5: Mineral White
+        6: Silver Blue
+        7: Ametrin Metallic
+    ]]--
+
+    IN.CameraPerspective_ID = INT -- ID of camera perspective (DEFAULT: 1) - all options listed below
+    --[[
+        1: Side
+        2: Wheel close-up
+        3: Classic beauty shot
+        4: Big front
+        5: High roof
+        6: Trunk
+    ]]--
+
+    IN.Door_F_L_OpeningValue = FLOAT -- Open/close door (front left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_F_R_OpeningValue = FLOAT -- Open/close door (front right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_B_L_OpeningValue = FLOAT -- Open/close door (back left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_B_R_OpeningValue = FLOAT -- Open/close door (back right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+
+    IN.Tailgate_OpeningValue = FLOAT -- Open/close tailgate (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+
+
+    -- Output Parameters (linked to 'Interface_CameraCrane' script)
+    OUT.CameraPerspective = GLOBAL.perspectiveSettings
+
+    -- Output Parameters (linked to 'Interface_Car' script)
+    OUT.CarPaint = GLOBAL.paintSettings
+
+    OUT.Door_F_L_OpeningValue = FLOAT
+    OUT.Door_F_R_OpeningValue = FLOAT
+    OUT.Door_B_L_OpeningValue = FLOAT
+    OUT.Door_B_R_OpeningValue = FLOAT
+
+    OUT.Tailgate_OpeningValue = FLOAT
+end
+
+
 -- Initializing (script-global) functions and variables
 function init()
     -- Global functions
@@ -144,53 +191,6 @@ function init()
             NormalScale = 0.05,
         },
     }
-end
-
-
--- Define Input and Output parameters
-function interface()
-    -- Input Parameters
-    IN.CarPaint_ID = INT -- ID of exterior paint (DEFAULT: 1) - all options listed below
-    --[[
-        1: Pyhtonic Blue
-        2: Transanit Blue
-        3: Black
-        4: Black Metallic
-        5: Mineral White
-        6: Silver Blue
-        7: Ametrin Metallic
-    ]]--
-
-    IN.CameraPerspective_ID = INT -- ID of camera perspective (DEFAULT: 1) - all options listed below
-    --[[
-        1: Side
-        2: Wheel close-up
-        3: Classic beauty shot
-        4: Big front
-        5: High roof
-        6: Trunk
-    ]]--
-
-    IN.Door_F_L_OpeningValue = FLOAT -- Open/close door (front left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-    IN.Door_F_R_OpeningValue = FLOAT -- Open/close door (front right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-    IN.Door_B_L_OpeningValue = FLOAT -- Open/close door (back left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-    IN.Door_B_R_OpeningValue = FLOAT -- Open/close door (back right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-
-    IN.Tailgate_OpeningValue = FLOAT -- Open/close tailgate (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-
-
-    -- Output Parameters (linked to 'Interface_CameraCrane' script)
-    OUT.CameraPerspective = GLOBAL.perspectiveSettings
-
-    -- Output Parameters (linked to 'Interface_Car' script)
-    OUT.CarPaint = GLOBAL.paintSettings
-
-    OUT.Door_F_L_OpeningValue = FLOAT
-    OUT.Door_F_R_OpeningValue = FLOAT
-    OUT.Door_B_L_OpeningValue = FLOAT
-    OUT.Door_B_R_OpeningValue = FLOAT
-
-    OUT.Tailgate_OpeningValue = FLOAT
 end
 
 

@@ -11,7 +11,7 @@ _Created with Ramses Composer Version 0.13.1_
 #
 ## Overview
 
-This project contains all materials, and textures (2D aand cubemaps) needed for the 3D car.
+This project contains all materials, and textures (2D and cubemaps) needed for the 3D car.
 
 The scene contains a prefab which is set up in such a way so that it can be shared between various project scenes.
 
