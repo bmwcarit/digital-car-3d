@@ -36,11 +36,11 @@ Open [the G05 project file](./G05_main.rca) via File->Open.
 
 Uncollapse the `root` node in the `Scene Graph` tab and select the `SceneControls` script:
 
-![Interface](./docs/interface.png)]
+![Interface](./docs/interface.png)
 
 In the `Property Browser` tab you will see a list of inputs you can set/modify:
 
-![Interface](./docs/properties.png)]
+![Properties](./docs/properties.png)
 
 #
 ## Modify some of the car features
