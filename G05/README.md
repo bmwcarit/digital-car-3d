@@ -77,7 +77,7 @@ You can find more detailed documentation of the input values by looking into [th
 which you can open from the pencil button right next to the `URI` field in the Property Browser.
 
 #
-## What next
+## What to do next
 
 To learn how to modify the scene in more complex ways, or simply understand how it works,
 please refer to the [Ramses Composer tutorials](https://github.com/bmwcarit/ramses-composer-docs) which explain the various features of the
