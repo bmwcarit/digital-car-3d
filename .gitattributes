@@ -1,0 +1,29 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+*.lua        text
+*.frag       text
+*.vert       text
+
+# Denote all files that are truly binary and should not be modified.
+*.png   binary
+*.bin   binary
+*.blend binary
+*.exe   binary
+*.dll   binary
+*.rca   binary
+# Usually larger than 1Mb, use LFS to version for efficiency
+*.gltf  binary
+*.glb   binary
+
+*.png	filter=lfs diff=lfs merge=lfs -text
+*.bin	filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.exe   filter=lfs diff=lfs merge=lfs -text
+*.dll   filter=lfs diff=lfs merge=lfs -text
+*.rca   filter=lfs diff=lfs merge=lfs -text
+# Usually larger than 1Mb, use LFS to version for efficiency
+*.gltf  filter=lfs diff=lfs merge=lfs -text
+*.glb   filter=lfs diff=lfs merge=lfs -text
