@@ -102,7 +102,8 @@ It contains external references to the following reusable projects (make sure th
 
 The G05 OSS is based on a PoC project. Thus, it was created with limited time, resources, and manpower. We know that the project is not perfect and would likely look differently after a few rounds of optimization.
 
-However, we still believe that the G05 is a worthwile demo project for the Ramses Composer, as it displays a great deal of features used, has a fairly complex and quite realistic setup.
+However, we still believe that the G05 is a worthwhile demo for the capabilities of the Ramses Composer, as it displays a great deal of features of the software.
+It has quite realistic graphics and a complex setup which is modeled after industry-related use-cases.
 
 Over time, we want to maintain and improve the demo and enrich it with new and upcoming features of Ramses, so stay tuned for that.
 
