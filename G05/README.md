@@ -17,8 +17,8 @@ _Created with [Ramses Composer Version 0.13.1](https://github.com/bmwcarit/ramse
 
 Direct links:
 
-* [Windows](https://github.com/COVESA/ramses-composer/releases/download/v0.13.1/RamsesComposerWindows_v0.13.1.zip)
-* [Linux](https://github.com/COVESA/ramses-composer/releases/download/v0.13.1/RamsesComposerLinux_v0.13.1.zip)
+* [Windows](https://github.com/bmwcarit/ramses-composer/releases/download/v0.13.1/RamsesComposerWindows_v0.13.1.zip)
+* [Linux](https://github.com/bmwcarit/ramses-composer/releases/download/v0.13.1/RamsesComposerLinux_v0.13.1.zip)
 
 ## Start the Ramses Composer
 
