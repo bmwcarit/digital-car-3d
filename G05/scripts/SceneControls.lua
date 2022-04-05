@@ -143,7 +143,7 @@ function init()
             NormalScale = 0.05,
         },
         {   -- [2]
-            Name = "Transanit Blue",
+            Name = "Tanzanite Blue",
             BaseColor = {0.03, 0.037, 0.12, 1.0},
             MetallicRoughness = {0.9, 0.33},
             SheenRoughness = 0.15,
