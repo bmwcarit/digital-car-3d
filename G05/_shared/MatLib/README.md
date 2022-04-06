@@ -16,7 +16,7 @@ This project contains all materials, and textures (2D and cubemaps) needed for t
 The scene contains a prefab which is set up in such a way so that it can be shared between various project scenes.
 
 #
-## Featuers
+## Features
 
 For further information on the materials, see the documentation in the individual [shader files](./shaders).
 

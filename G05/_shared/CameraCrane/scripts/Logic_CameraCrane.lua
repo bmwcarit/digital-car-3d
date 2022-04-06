@@ -57,15 +57,10 @@ function interface()
     OUT.POS_ORIGIN_Translation = VEC3F
     OUT.POS_ORIGIN_R_Translation = VEC3F
     OUT.YAW_Rotation = VEC3F
-    OUT.YAW_R_Rotation = VEC3F
     OUT.PITCH_Rotation = VEC3F
-    OUT.PITCH_R_Rotation = VEC3F
     OUT.DIST_Rotation = VEC3F
-    OUT.DIST_R_Rotation = VEC3F
     OUT.DIST_Translation = VEC3F
-    OUT.DIST_R_Translation = VEC3F
     OUT.CAM_Translation = VEC3F
-    OUT.CAM_R_Translation = VEC3F
 
     -- Linked to Properties of SceneCamera and ReflectionCamera
 
@@ -93,10 +88,7 @@ function run()
     local localTranslation = IN.LocalTranslation
 
     OUT.POS_ORIGIN_Translation = {origin[1], origin[2], origin[3]}
-    OUT.POS_ORIGIN_R_Translation = {origin[1], -origin[2], origin[3]} -- Reflection mirrored on vertical axis
-
     OUT.CAM_Translation = {localTranslation[1], localTranslation[2], localTranslation[3]}
-    OUT.CAM_R_Translation = {localTranslation[1], -localTranslation[2], localTranslation[3]} -- Reflection mirrored on vertical axis
 
     local yaw = IN.CraneGimbal.Yaw % 360
     local pitch = GLOBAL.clamp(IN.CraneGimbal.Pitch, GLOBAL.CAMERA_MIN_PITCH, GLOBAL.CAMERA_MAX_PITCH) % 360
@@ -104,16 +96,9 @@ function run()
     local distance = GLOBAL.clamp(IN.CraneGimbal.Distance, GLOBAL.CAMERA_MIN_DISTANCE, GLOBAL.CAMERA_MAX_DISTANCE)
 
     OUT.YAW_Rotation = {0.0, yaw, 0.0}
-    OUT.YAW_R_Rotation = {0.0, yaw, 0.0}  -- Reflection mirrored on vertical axis
-
     OUT.PITCH_Rotation = {-pitch, 0.0, 0.0}
-    OUT.PITCH_R_Rotation = {pitch, 0.0, 0.0}  -- Reflection mirrored on vertical axis
-
     OUT.DIST_Rotation = {0.0, 0.0, roll} -- = ROLL
-    OUT.DIST_R_Rotation = {0.0, 0.0, -roll} -- = ROLL_R, Reflection mirrored on vertical axis
-
     OUT.DIST_Translation = {0.0, 0.0, distance} -- = DISTANCE
-    OUT.DIST_R_Translation = {0.0, 0.0, distance}
 
     -- Viewport
 
