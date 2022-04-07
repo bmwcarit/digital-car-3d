@@ -12,3 +12,9 @@ Currently only a single model is released - a BMW X5 released back in 2018.
 Stay tuned for more models in the future.
 
 * [G05 (BMW X5 2018)](./G05/README.md)
+
+
+# License
+
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+See [the license file](LICENSE.txt) for details.

@@ -107,9 +107,3 @@ It has quite realistic graphics and a complex setup which is modeled after indus
 
 Over time, we want to maintain and improve the demo and enrich it with new and upcoming features of Ramses, so stay tuned for that.
 
-#
-## License
-
-This work is licensed under the Creative Commons Attribution 4.0 International License.
-See [license file](LICENSE.txt) for details.
-
