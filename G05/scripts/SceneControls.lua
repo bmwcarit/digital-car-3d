@@ -10,7 +10,7 @@ function interface()
     -- Input Parameters
     IN.CarPaint_ID = INT -- ID of exterior paint (DEFAULT: 1) - all options listed below
     --[[
-        1: Pyhtonic Blue
+        1: Pythonic Blue
         2: Transanit Blue
         3: Black
         4: Black Metallic
@@ -135,7 +135,7 @@ function init()
     GLOBAL.Paints =
     {
         {   -- [1]
-            Name = "Pyhtonic Blue",
+            Name = "Pythonic Blue",
             BaseColor = {0.026, 0.095, 0.173, 1.0},
             MetallicRoughness = {0.9, 0.4},
             SheenRoughness = 0.12,

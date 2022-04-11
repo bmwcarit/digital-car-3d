@@ -26,7 +26,7 @@ Go to bin/RelWithDebInfo, start RamsesComposer.exe on Windows, RamsesComposer.sh
 
 ## Open the car project
 
-Open [the G05 project file](./G05_main.rca) via File->Open.
+Open the [G05 project file (G05_main.rca)](./G05_main.rca) via File->Open.
 
 #
 # Change settings and experiment
@@ -73,7 +73,7 @@ For values in between 0 and 1, the door angle is interpolated proportionally to 
 * The tailgate is closed at 0.0 and fully open at 1.0.
 For values in between 0 and 1, the tailgate angle is interpolated proportionally to the value (e.g. 0.5 is half-open) 
 
-You can find more detailed documentation of the input values by looking into [the control script](./scripts/SceneControls.lua)
+You can find more detailed documentation of the input values by looking into the [actual control script (SceneControls.lua)](./scripts/SceneControls.lua)
 which you can open from the pencil button right next to the `URI` field in the Property Browser.
 
 #

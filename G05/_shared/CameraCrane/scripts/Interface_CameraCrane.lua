@@ -39,7 +39,7 @@ function interface()
 
     local frustum =
     {
-        AspectRatio = FLOAT, -- ratio of width to height (DEFAULT: 1.77778), output value per default calcualted in run()
+        AspectRatio = FLOAT, -- ratio of width to height (DEFAULT: 1.77778), output value per default calculated in run()
         HorizontalFOV = FLOAT, -- horizontal field of view (deg) (DEFAULT: 43.0) (MIN: 0.0001) (MAX: 179.9999)
         NearPlane = FLOAT, -- closest distance where objects will still be visible (cm) (DEFAULT: 50.0)
         FarPlane = FLOAT, -- farthest distance where objects will still be visible (cm) (DEFAULT: 5000.0)
