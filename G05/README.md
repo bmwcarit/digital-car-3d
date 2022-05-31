@@ -8,7 +8,7 @@ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 #
 # BMW X5 2018 (G05)
 
-_Created with [Ramses Composer Version 0.13.1](https://github.com/bmwcarit/ramses-composer)_
+_Created with [Ramses Composer Version 1.0.0](https://github.com/bmwcarit/ramses-composer)_
 
 #
 # How to open the project?
@@ -17,8 +17,8 @@ _Created with [Ramses Composer Version 0.13.1](https://github.com/bmwcarit/ramse
 
 Direct links:
 
-* [Windows](https://github.com/bmwcarit/ramses-composer/releases/download/v0.13.1/RamsesComposerWindows_v0.13.1.zip)
-* [Linux](https://github.com/bmwcarit/ramses-composer/releases/download/v0.13.1/RamsesComposerLinux_v0.13.1.zip)
+* [Windows](https://github.com/bmwcarit/ramses-composer/releases/download/v1.0.0-updated-changelog/RamsesComposerWindows_v1.0.0.zip)
+* [Linux](https://github.com/bmwcarit/ramses-composer/releases/download/v1.0.0-updated-changelog/RamsesComposerLinux_v1.0.0.zip)
 
 ## Start the Ramses Composer
 
@@ -71,7 +71,7 @@ For values in between 0 and 1, the door angle is interpolated proportionally to 
 * To set the tailgate opening angle, use the _Tailgate_OpeningValue_ property
 * Analogous to the doors, the tailgate can also be opened or closed
 * The tailgate is closed at 0.0 and fully open at 1.0.
-For values in between 0 and 1, the tailgate angle is interpolated proportionally to the value (e.g. 0.5 is half-open) 
+For values in between 0 and 1, the tailgate angle is interpolated proportionally to the value (e.g. 0.5 is half-open)
 
 You can find more detailed documentation of the input values by looking into the [actual control script (SceneControls.lua)](./scripts/SceneControls.lua)
 which you can open from the pencil button right next to the `URI` field in the Property Browser.
@@ -91,7 +91,7 @@ By default, the _Ramses Preview_ window in Ramses Composer shows you the unvarni
 #
 ## Dependencies
 
-This project uses external references extensively (see [the official documentation on external references](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/external_references)).  
+This project uses external references extensively (see [the official documentation on external references](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/external_references)).
 It contains external references to the following reusable projects (make sure they remain in the same relative paths):
 * [CameraCrane](_shared/CameraCrane)
 * [Environment](_shared/Environment)

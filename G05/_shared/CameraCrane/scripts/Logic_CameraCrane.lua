@@ -25,63 +25,63 @@ end
 
 
 -- Define Input and Output parameters
-function interface()
+function interface(IN,OUT)
     IN.CraneGimbal = {
-        Yaw = FLOAT,
-        Pitch = FLOAT,
-        Roll = FLOAT,
-        Distance = FLOAT
+        Yaw = Type:Float(),
+        Pitch = Type:Float(),
+        Roll = Type:Float(),
+        Distance = Type:Float()
     }
 
-    IN.Origin = VEC3F
-    IN.LocalTranslation = VEC3F
+    IN.Origin = Type:Vec3f()
+    IN.LocalTranslation = Type:Vec3f()
 
     IN.Viewport = {
-        OffsetX = INT,
-        OffsetY = INT,
-        Width = INT,
-        Height = INT
+        OffsetX = Type:Int32(),
+        OffsetY = Type:Int32(),
+        Width = Type:Int32(),
+        Height = Type:Int32()
     }
 
     IN.Frustum = {
-        AspectRatio = FLOAT,
-        HorizontalFOV = FLOAT,
-        NearPlane = FLOAT,
-        FarPlane = FLOAT
+        AspectRatio = Type:Float(),
+        HorizontalFOV = Type:Float(),
+        NearPlane = Type:Float(),
+        FarPlane = Type:Float()
     }
 
-    IN.AspectFromResolution = BOOL
+    IN.AspectFromResolution = Type:Bool()
 
 
     -- Linked to Properties of Node with corresponding prefix
-    OUT.POS_ORIGIN_Translation = VEC3F
-    OUT.POS_ORIGIN_R_Translation = VEC3F
-    OUT.YAW_Rotation = VEC3F
-    OUT.PITCH_Rotation = VEC3F
-    OUT.DIST_Rotation = VEC3F
-    OUT.DIST_Translation = VEC3F
-    OUT.CAM_Translation = VEC3F
+    OUT.POS_ORIGIN_Translation = Type:Vec3f()
+    OUT.POS_ORIGIN_R_Translation = Type:Vec3f()
+    OUT.YAW_Rotation = Type:Vec3f()
+    OUT.PITCH_Rotation = Type:Vec3f()
+    OUT.DIST_Rotation = Type:Vec3f()
+    OUT.DIST_Translation = Type:Vec3f()
+    OUT.CAM_Translation = Type:Vec3f()
 
     -- Linked to Properties of SceneCamera and ReflectionCamera
 
     OUT.viewport = {
-        offsetX = INT,
-        offsetY = INT,
-        width = INT,
-        height = INT
+        offsetX = Type:Int32(),
+        offsetY = Type:Int32(),
+        width = Type:Int32(),
+        height = Type:Int32()
     }
 
     OUT.frustum = {
-        nearPlane = FLOAT,
-        farPlane =  FLOAT,
-        fieldOfView = FLOAT,
-        aspectRatio = FLOAT
+        nearPlane = Type:Float(),
+        farPlane =  Type:Float(),
+        fieldOfView = Type:Float(),
+        aspectRatio = Type:Float()
     }
 end
 
 
 -- Calculating Output parameters based on Input parameters
-function run()
+function run(IN,OUT)
     -- Crane Gimbal
 
     local origin = IN.Origin

@@ -6,9 +6,9 @@ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 
 -- Define Input and Output parameters
-function interface()
+function interface(IN,OUT)
     -- Input Parameters
-    IN.CarPaint_ID = INT -- ID of exterior paint (DEFAULT: 1) - all options listed below
+    IN.CarPaint_ID = Type:Int32() -- ID of exterior paint (DEFAULT: 1) - all options listed below
     --[[
         1: Pythonic Blue
         2: Transanit Blue
@@ -19,7 +19,7 @@ function interface()
         7: Ametrin Metallic
     ]]--
 
-    IN.CameraPerspective_ID = INT -- ID of camera perspective (DEFAULT: 1) - all options listed below
+    IN.CameraPerspective_ID = Type:Int32() -- ID of camera perspective (DEFAULT: 1) - all options listed below
     --[[
         1: Side
         2: Wheel close-up
@@ -29,12 +29,12 @@ function interface()
         6: Trunk
     ]]--
 
-    IN.Door_F_L_OpeningValue = FLOAT -- Open/close door (front left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-    IN.Door_F_R_OpeningValue = FLOAT -- Open/close door (front right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-    IN.Door_B_L_OpeningValue = FLOAT -- Open/close door (back left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
-    IN.Door_B_R_OpeningValue = FLOAT -- Open/close door (back right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_F_L_OpeningValue = Type:Float() -- Open/close door (front left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_F_R_OpeningValue = Type:Float() -- Open/close door (front right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_B_L_OpeningValue = Type:Float() -- Open/close door (back left) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Door_B_R_OpeningValue = Type:Float() -- Open/close door (back right) (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
 
-    IN.Tailgate_OpeningValue = FLOAT -- Open/close tailgate (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
+    IN.Tailgate_OpeningValue = Type:Float() -- Open/close tailgate (MIN: 0.0 = fully closed, MAX: 1.0 = fully open, DEFAULT: 0.0)
 
 
     -- Output Parameters (linked to 'Interface_CameraCrane' script)
@@ -43,12 +43,12 @@ function interface()
     -- Output Parameters (linked to 'Interface_Car' script)
     OUT.CarPaint = GLOBAL.paintSettings
 
-    OUT.Door_F_L_OpeningValue = FLOAT
-    OUT.Door_F_R_OpeningValue = FLOAT
-    OUT.Door_B_L_OpeningValue = FLOAT
-    OUT.Door_B_R_OpeningValue = FLOAT
+    OUT.Door_F_L_OpeningValue = Type:Float()
+    OUT.Door_F_R_OpeningValue = Type:Float()
+    OUT.Door_B_L_OpeningValue = Type:Float()
+    OUT.Door_B_R_OpeningValue = Type:Float()
 
-    OUT.Tailgate_OpeningValue = FLOAT
+    OUT.Tailgate_OpeningValue = Type:Float()
 end
 
 
@@ -67,11 +67,11 @@ function init()
 
     GLOBAL.perspectiveSettings =
     {
-        Yaw = FLOAT,
-        Pitch = FLOAT,
-        Roll = FLOAT,
-        Distance = FLOAT,
-        Origin = VEC3F,
+        Yaw = Type:Float(),
+        Pitch = Type:Float(),
+        Roll = Type:Float(),
+        Distance = Type:Float(),
+        Origin = Type:Vec3f(),
     }
 
     -- List of all possible camera perspectives (can be extended)
@@ -123,12 +123,12 @@ function init()
 
     GLOBAL.paintSettings =
     {
-        Name = STRING, -- for debugging
-        BaseColor = VEC4F,
-        MetallicRoughness = VEC2F,
-        SheenRoughness = FLOAT,
-        SheenScale = FLOAT,
-        NormalScale = FLOAT,
+        Name = Type:String(), -- for debugging
+        BaseColor = Type:Vec4f(),
+        MetallicRoughness = Type:Vec2f(),
+        SheenRoughness = Type:Float(),
+        SheenScale = Type:Float(),
+        NormalScale = Type:Float(),
     }
 
     -- List of all possible car paints (can be extended)
@@ -195,7 +195,7 @@ end
 
 
 -- Passing through the Input parameters to the Output parameters
-function run()
+function run(IN,OUT)
     OUT.CameraPerspective = GLOBAL.Perspectives[GLOBAL.clamp(IN.CameraPerspective_ID, 1, #GLOBAL.Perspectives)]
 
     OUT.CarPaint = GLOBAL.Paints[GLOBAL.clamp(IN.CarPaint_ID, 1, #GLOBAL.Paints)]
