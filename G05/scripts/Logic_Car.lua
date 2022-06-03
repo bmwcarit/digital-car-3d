@@ -32,28 +32,28 @@ end
 
 
 -- Define Input and Output parameters
-function interface()
+function interface(IN,OUT)
     -- Input Parameters
-    IN.Door_F_L_OpeningValue = FLOAT
-    IN.Door_F_R_OpeningValue = FLOAT
-    IN.Door_B_L_OpeningValue = FLOAT
-    IN.Door_B_R_OpeningValue = FLOAT
+    IN.Door_F_L_OpeningValue = Type:Float()
+    IN.Door_F_R_OpeningValue = Type:Float()
+    IN.Door_B_L_OpeningValue = Type:Float()
+    IN.Door_B_R_OpeningValue = Type:Float()
 
-    IN.Tailgate_OpeningValue = FLOAT
+    IN.Tailgate_OpeningValue = Type:Float()
 
 
     -- Output Parameters
-    OUT.Pivot_Door_F_L_Rotation = VEC3F
-    OUT.Pivot_Door_F_R_Rotation = VEC3F
-    OUT.Pivot_Door_B_L_Rotation = VEC3F
-    OUT.Pivot_Door_B_R_Rotation = VEC3F
+    OUT.Pivot_Door_F_L_Rotation = Type:Vec3f()
+    OUT.Pivot_Door_F_R_Rotation = Type:Vec3f()
+    OUT.Pivot_Door_B_L_Rotation = Type:Vec3f()
+    OUT.Pivot_Door_B_R_Rotation = Type:Vec3f()
 
-    OUT.Pivot_Tailgate_Rotation = VEC3F
+    OUT.Pivot_Tailgate_Rotation = Type:Vec3f()
 end
 
 
 -- Calculating Output parameters based on Input parameters
-function run()
+function run(IN,OUT)
     OUT.Pivot_Door_F_L_Rotation = {0.0, -GLOBAL.lerp(GLOBAL.DOORS_F_ANGLE_CLOSED, GLOBAL.DOORS_F_ANGLE_OPEN,
                                                      GLOBAL.clamp(IN.Door_F_L_OpeningValue, 0.0, 1.0)), 0.0}
     OUT.Pivot_Door_F_R_Rotation = {0.0, -GLOBAL.lerp(GLOBAL.DOORS_F_ANGLE_CLOSED, GLOBAL.DOORS_F_ANGLE_OPEN,
