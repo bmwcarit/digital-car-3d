@@ -8,7 +8,7 @@ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 #
 # BMW X5 2018 (G05)
 
-_Created with [Ramses Composer Version 1.0.0](https://github.com/bmwcarit/ramses-composer)_
+_Created with [Ramses Composer Version 1.3.0](https://github.com/bmwcarit/ramses-composer)_
 
 #
 # How to open the project?
@@ -17,8 +17,8 @@ _Created with [Ramses Composer Version 1.0.0](https://github.com/bmwcarit/ramses
 
 Direct links:
 
-* [Windows](https://github.com/bmwcarit/ramses-composer/releases/download/v1.0.0-updated-changelog/RamsesComposerWindows_v1.0.0.zip)
-* [Linux](https://github.com/bmwcarit/ramses-composer/releases/download/v1.0.0-updated-changelog/RamsesComposerLinux_v1.0.0.zip)
+* [Windows](https://github.com/bmwcarit/ramses-composer/releases/download/v1.3.0/RamsesComposerWindows_v1.3.0.zip)
+* [Linux](https://github.com/bmwcarit/ramses-composer/releases/download/v1.3.0/RamsesComposerLinux_v1.3.0.zip)
 
 ## Start the Ramses Composer
 
