@@ -80,7 +80,7 @@ which you can open from the pencil button right next to the `URI` field in the P
 ## What to do next
 
 To learn how to modify the scene in more complex ways, or simply understand how it works,
-please refer to the [Ramses Composer tutorials](https://github.com/bmwcarit/ramses-composer-docs) which explain the various features of the
+please refer to the [Ramses Composer tutorials](https://ramses-composer.readthedocs.io) which explain the various features of the
 Composer with interactive examples.
 
 #
@@ -91,7 +91,7 @@ By default, the _Ramses Preview_ window in Ramses Composer shows you the unvarni
 #
 ## Dependencies
 
-This project uses external references extensively (see [the official documentation on external references](https://github.com/bmwcarit/ramses-composer-docs/tree/master/advanced/external_references)).
+This project uses external references extensively (see [the official documentation on external references](https://ramses-composer.readthedocs.io/en/latest/advanced/external_references/README.html)).
 It contains external references to the following reusable projects (make sure they remain in the same relative paths):
 * [CameraCrane](_shared/CameraCrane)
 * [Environment](_shared/Environment)
